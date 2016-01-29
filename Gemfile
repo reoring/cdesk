@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
+
+gem 'rails', '4.2.5'
+gem 'pg'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -24,6 +28,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
+
+gem 'devise'
+
+# Use Puma as the app server
+gem 'puma'
+
+gem 'heroku-api'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
