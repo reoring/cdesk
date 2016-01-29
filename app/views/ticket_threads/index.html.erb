@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ticket Threads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ticket_threads.each do |ticket_thread| %>
+      <tr>
+        <td><%= ticket_thread.name %></td>
+        <td><%= link_to 'Show', ticket_thread %></td>
+        <td><%= link_to 'Edit', edit_ticket_thread_path(ticket_thread) %></td>
+        <td><%= link_to 'Destroy', ticket_thread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ticket thread', new_ticket_thread_path %>

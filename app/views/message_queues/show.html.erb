@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @message_queue.name %>
+</p>
+
+<%= link_to 'Edit', edit_message_queue_path(@message_queue) %> |
+<%= link_to 'Back', message_queues_path %>

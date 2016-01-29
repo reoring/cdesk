@@ -1,0 +1,2 @@
+module TicketThreadsHelper
+end
